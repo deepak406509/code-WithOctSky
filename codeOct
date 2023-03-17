@@ -1,0 +1,23 @@
+<ul id="list">
+  <li>Newly created li tag <button class="delete-btn">Delete</button><button class="edit-btn">Edit</button></li>
+</ul>
+
+<script>
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+  const editBtns = document.querySelectorAll('.edit-btn');
+
+  // Handle delete button clicks
+  deleteBtns.forEach(deleteBtn => {
+    deleteBtn.addEventListener('click', () => {
+      const li = deleteBtn.parentElement;
+      li.remove();
+    });
+  });
+
+  // Add click event listener to edit buttons (no functionality added)
+  editBtns.forEach(editBtn => {
+    editBtn.addEventListener('click', () => {
+      console.log('Edit button clicked');
+    });
+  });
+</script>
